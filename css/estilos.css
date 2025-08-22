@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8ece0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #6b4e31;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav .logo {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a.activo {
+    font-weight: bold;
+    border-bottom: 3px solid #d9a66d;
+    color: #d9a66d;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+h1 {
+    color: #6b4e31;
+    text-align: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border: 2px solid #d9a66d;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #6b4e31;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 5px 0 15px 0;
+    padding: 8px;
+    border: 1px solid #6b4e31;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    color: #6b4e31;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #6b4e31;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d9a66d;
+}
+
+footer {
+    background-color: #6b4e31;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+footer a {
+    color: #d9a66d;
+    text-decoration: none;
+}
+
+.imagen-grande {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ====== Secciones de inicio ====== */
+section { margin: 40px auto; max-width: 1200px; padding: 10px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; }
+.hero__text h1 { color: #6b4e31; margin: 0 0 12px; }
+.hero__media img { width: 100%; height: auto; border-radius: 8px; }
+
+/* Destacados */
+.destacados h2, .historia h2 { color: #6b4e31; text-align: center; }
+.grid-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { border: 1px solid #d9a66d; border-radius: 8px; padding: 12px; background: #fff; }
+.card figure { margin: 0 0 8px; }
+.card img { width: 100%; height: auto; border-radius: 6px; }
+
+/* Historia */
+.historia { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; }
+.historia__media img { width: 100%; height: auto; border-radius: 8px; }
+
+/* ====== Footer: logos de redes sociales (uniformes y centrados) ====== */
+footer p {
+  margin: 0;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Contenedor redondo para cada icono */
+.redes-sociales a {
+  display: inline-flex;
+  width: 40px;           /* tamaño del botón */
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+/* Efecto hover sutil */
+.redes-sociales a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Icono dentro del botón */
+.redes-sociales img {
+  display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .hero, .historia { grid-template-columns: 1fr; }
+  .grid-cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-cards { grid-template-columns: 1fr; }
+}
